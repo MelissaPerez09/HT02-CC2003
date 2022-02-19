@@ -1,56 +1,60 @@
-/** 
- * Nombre: Emily ELvia Melissa Perez Alarcon
- * Carnet: 21385
- * Curso: Algoritmos y estructuras de datos
- * Nombre del programa: Calculadora.java
-    @version: 
-        - Creacion: 17/02/2022
-        - Ultima modificacion: 00/02/2022
-    Clase que implementa la calculadora
-*/
+//VERSION FINAL
 
+import java.util.ArrayList;
 /**
- * @author melissaperez_
+ * @author moises.alonso
  *
-*/
-
-import java.util.Vector;
-
+ */
 public class Stack<T> implements IStack<T> {
-    private Vector<T> vector;
 
-    public Stack(){
-        vector = new Vector<T>();
-    }
+	private ArrayList<T> coreList;
+	
+	public Stack() {
+		coreList = new ArrayList<T>();
+	}
+	
+	/** 
+	 * ingresa un valor al stack
+	 * @param value
+	 */
+	@Override
+	public void push(T value) {		
+		coreList.add(0, value);
+	}
 
-    @Override
-    public void push(T value) {
-        vector.add(value);
-    }
+	/** 
+	 * saca el ultimo elemento del stack
+	 * @return T
+	 */
+	@Override
+	public T pull() {
+		return coreList.remove(0);
+	}
 
-    @Override
-    public T pull() {
-        if(!isEmpty()){ // IF THERE'S SOMETHING IN THE STACK
-            T temp = vector.lastElement();
-            vector.remove(vector.size() - 1);
-            return temp;    
-        }else{
-            return null;
-        }
-    }
+	/** 
+	 * saca el primer elemento del stack
+	 * @return T
+	 */
+	@Override
+	public T peek() {
+		return coreList.get(0);
+	}
 
-    @Override
-    public T peek() {
-        return vector.lastElement();
-    }
+	/** 
+	 * cuenta la cantidad de elementos en el stack
+	 * @return int
+	 */
+	@Override
+	public int count() {
+		return coreList.size();
+	}
 
-    @Override
-    public int count() {
-        return vector.size();
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return vector.isEmpty();
-    }
+	/** 
+	 * evalua si el stack esta vacio
+	 * @return boolean
+	 */
+	@Override
+	public boolean isEmpty() {		
+		return coreList.isEmpty();
+	}
 }

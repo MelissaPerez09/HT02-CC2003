@@ -1,21 +1,38 @@
-/** 
- * Nombre: Emily ELvia Melissa Perez Alarcon
- * Carnet: 21385
- * Curso: Algoritmos y estructuras de datos
- * Nombre del programa: Stack.java
-    @version: 
-        - Creacion: 17/02/2022
-        - Ultima modificacion: 00/02/2022
-    Clase que implementa los stacks por medio de vectores
-*/
-
+import java.util.ArrayList;
 /**
- * @author melissaperez_
+ * @author moises.alonso
  *
-*/
+ */
+public class StackArrayList<T> implements IStack<T> {
 
-import java.util.Vector;
+	private ArrayList<T> coreList;
+	
+	public StackArrayList() {
+		coreList = new ArrayList<T>();
+	}
+	
+	@Override
+	public void push(T value) {		
+		coreList.add(0, value);
+	}
 
-public class Stack<T> implements IStack<T>{
-  
+	@Override
+	public T pull() {
+		return coreList.remove(0);
+	}
+
+	@Override
+	public T peek() {
+		return coreList.get(0);
+	}
+
+	@Override
+	public int count() {
+		return coreList.size();
+	}
+
+	@Override
+	public boolean isEmpty() {		
+		return coreList.isEmpty();
+	}
 }

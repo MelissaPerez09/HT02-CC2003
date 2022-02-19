@@ -38,8 +38,8 @@ public class Simulador{
         vis.bienvenida();
         if(leerArchivo()){ 
             while(!linesStack.isEmpty()){ 
-                String temp = linesStack.pull();
-                vis.mostrarResultado(temp, calc.operar(temp));
+                String x = linesStack.pull();
+                vis.mostrarResultado(x, calc.operar(x));
             }
         }
     }
@@ -64,4 +64,3 @@ public class Simulador{
         }
     }
 }
-

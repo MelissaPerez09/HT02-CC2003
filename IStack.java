@@ -4,13 +4,13 @@
  */
 public interface IStack<T> {
 
-	void push(T value);
+	public void push(T value);
 	
-	T pull();
+	public T pull();
 	
-	T peek();
+	public T peek();
 	
-	int count();
+	public int count();
 	
-	boolean isEmpty();
+	public boolean isEmpty();
 }

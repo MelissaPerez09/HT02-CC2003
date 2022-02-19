@@ -18,13 +18,6 @@ import java.util.Scanner;
 
 public class Vista{
   /**
-   * constructor para iniciar el scanner
-   */
-  public Vista(){
-    scan = new Scanner(System.in);
-  }
-
-    /**
      * imprime en pantalla el texto ingresado
      * @param text
      */
@@ -56,4 +49,10 @@ public class Vista{
       mensaje("El resultado es: " + resultado);
   }
 
+    /**
+   * imprime mensaje de bienvenida
+   */
+  public void despedida(){
+    mensaje("Gracias por usar la calculadora POSTFIX :)");
+  }
 }

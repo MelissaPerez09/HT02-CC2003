@@ -21,7 +21,7 @@ import java.util.Scanner;
 public class Simulador{
     private Vista vis;
     private Stack<String> linesStack;
-    private Calculadora calc;
+    private Posfix calc;
 
     /**
      * constructor del simulador
@@ -29,7 +29,7 @@ public class Simulador{
     public Simulador(){
         vis = new Vista();
         linesStack = new Stack<String>();
-        calc = new Calculadora();
+        calc = new Posfix();
     }
     /**
      * para ejecutar
@@ -64,3 +64,4 @@ public class Simulador{
         }
     }
 }
+

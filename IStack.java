@@ -1,16 +1,18 @@
+//VERSION FINAL
+
 /**
  * @author moises.alonso
  *
  */
 public interface IStack<T> {
 
-	public void push(T value);
+	void push(T value);
 	
-	public T pull();
+	T pull();
 	
-	public T peek();
+	T peek();
 	
-	public int count();
+	int count();
 	
-	public boolean isEmpty();
+	boolean isEmpty();
 }
